@@ -17,7 +17,7 @@ int Count_Occurences_of_Anagram(string a,string b)
 	int i=0,j=0;
 	while(j<a.length())
 	{
-		if(ourMap.count(a[i])>0)
+		if(ourMap.count(a[j])>0)
 		{
 			ourMap[a[j]]--;
 			if(ourMap[a[j]]==0)
