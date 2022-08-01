@@ -3,7 +3,7 @@ using namespace std;
 
 #define MOD 1000000007
 
-bool Is_Scambled(string a,string b)
+bool Is_Scrambled(string a,string b)
 {
 	if(a.length()!=b.length())
 	{
@@ -27,10 +27,10 @@ bool Is_Scambled(string a,string b)
 		int n = a.length();
 		for(int i=1;i<n;i++)
 		{
-			bool x1 = Is_Scambled(a.substr(0,i),b.substr(0,i));
-			bool x2 = Is_Scambled(a.substr(i,n-i),b.substr(i,n-i));
-			bool y1 = Is_Scambled(a.substr(0,i),b.substr(n-i,i));
-			bool y2 = Is_Scambled(a.substr(i,n-i),b.substr(0,n-i));
+			bool x1 = Is_Scrambled(a.substr(0,i),b.substr(0,i));
+			bool x2 = Is_Scrambled(a.substr(i,n-i),b.substr(i,n-i));
+			bool y1 = Is_Scrambled(a.substr(0,i),b.substr(n-i,i));
+			bool y2 = Is_Scrambled(a.substr(i,n-i),b.substr(0,n-i));
 			
 			bool op1 = (x1 && x2);
 			bool op2 = (y1 && y2);
@@ -51,7 +51,7 @@ int main()
 	string a,b;
 	cin>>a>>b;
 	
-	cout<<(Is_Scambled(a,b)?"True":"False")<<endl;
+	cout<<(Is_Scrambled(a,b)?"True":"False")<<endl;
 	
 	return 0;
 }
